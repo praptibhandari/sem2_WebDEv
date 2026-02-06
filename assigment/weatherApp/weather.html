@@ -24,13 +24,38 @@
         </div>
         <div class="weather-status">
           <div class="icon">
-            <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather-status-image" />
+            <img
+              src="weatherApp/sunny.jpg"
+              alt="weather-status-image"
+            />
           </div>
           <div class="condition">Sunny</div>
         </div>
+        <div class="details">
+          <div class="detail">
+            <span class="label">Feels like</span>
+            <span class="value feelslike">--°C</span>
+          </div>
+
+          <div class="detail">
+            <span class="label">Humidity</span>
+            <span class="value humidity">--%</span>
+          </div>
+
+          <div class="detail">
+            <span class="label">Wind</span>
+            <span class="value wind">-- km/h</span>
+          </div>
+
+          <div class="detail">
+            <span class="label">UV</span>
+            <span class="value uv">--</span>
+          </div>
+        </div>
       </div>
     </main>
+    <div class="weather-overlay rain"></div>
+
     <script src="./weather.js"></script>
   </body>
 </html>
-
