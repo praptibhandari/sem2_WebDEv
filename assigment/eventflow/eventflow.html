@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Flow Playground</title>
+
+   <link rel="stylesheet" href="./eventflow.css" />
+</head>
+
+<body>
+
+  <h1>Event Flow Playground</h1>
+  <div class="subtitle">
+    Demonstrating Capturing, Bubbling & Propagation Control
+  </div>
+
+  <div class="container">
+
+  
+    <div class="grandparent">
+      Grandparent
+      <div class="parent">
+        Parent
+        <br><br>
+        <button>Click Me</button>
+      </div>
+    </div>
+
+    
+    <div class="event-log">
+      <h3>Event Log</h3>
+      <p>
+        Grandparent — Capturing<br>
+        Parent — Capturing<br>
+        Parent — Bubbling<br>
+        Grandparent — Bubbling<br><br>
+
+        Child — Handler 1 (stopPropagation)<br>
+        Child — Handler 2 (will NOT run)<br>
+        Child — Handler 3 (will NOT run)
+      </p>
+       <div class="summary">
+        Capturing → Target → Bubbling<br>
+        stopPropagation blocks parents<br>
+        stopImmediatePropagation blocks sibling handlers
+      </div>
+
+    </div>
+
+  </div>
+<script src="eventflow.js"></script>
+</body>
+</html>
